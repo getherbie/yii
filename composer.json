@@ -1,0 +1,13 @@
+{
+    "name": "getherbie/yiiconnector",
+    "description": "The content for the Herbie website. Herbie is a file based CMS & Blos system and not ready for production use yet.",
+    "type": "project",
+    "minimum-stability": "dev",
+    "license":"BSD-3-Clause",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii": "1.1.*",
+        "getherbie/herbie": "dev-master",
+        "getherbie/yii": "dev-master"
+    }
+}

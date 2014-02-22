@@ -1,4 +1,5 @@
-yii-module
+Herbie Yii
 ==========
 
-Herbie Yii Module
+Herbie Yii is a module for Yii Framework.
+
