@@ -20,9 +20,9 @@ class Twigify extends CWidget
 
     public function run()
     {
-        $site = Yii::app()->getModule('herbie')->site;
         $string = ob_get_clean();
-        $app = new Herbie\Application($site);
+        $sitePath = Yii::app()->getModule('herbie')->sitePath;
+        $app = new Herbie\Application($sitePath);
         echo $app->renderString($string);
     }
 

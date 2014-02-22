@@ -12,7 +12,7 @@
 class HerbieModule extends CWebModule
 {
 
-    public $site;
+    public $sitePath;
 
     public function init()
     {
