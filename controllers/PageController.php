@@ -10,11 +10,14 @@
  */
 
 /**
- * PageController is the default controller to handle user requests.
+ * PageController is the controller which renders a Herbie page or blog post.
  */
 class PageController extends CController
 {
 
+    /**
+     * Action Index
+     */
     public function actionIndex()
     {
         $request = Yii::app()->request;
@@ -23,7 +26,8 @@ class PageController extends CController
             $route = $request->getPathInfo();
         }
 
-        $app = new Herbie\Application('../protected/herbie');
+        $sitePath = $this->getModule('herbie')->sitePath;
+        $app = new Herbie\Application($sitePath);
 
         $path = $app['urlMatcher']->match($route);
 

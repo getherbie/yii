@@ -9,23 +9,32 @@
  * file that was distributed with this source code.
  */
 
+/**
+ * UrlManager manages the URLs of the Herbie Yii module.
+ */
 class UrlManager extends CUrlManager
 {
 
+    /**
+     * Parses the user request.
+     * @param CHttpRequest $request The request application component.
+     * @return string The route (controllerID/actionID) and perhaps GET parameters in path format.
+     */
     public function parseUrl($request)
     {
-        $pathSegments = explode('/', $request->pathInfo);
         $route = $request->getQuery('r');
         if (is_null($route)) {
             $route = $request->getPathInfo();
         }
 
-        $app = new Herbie\Application('../protected/herbie');
+        $sitePath = Yii::app()->getModule('herbie')->sitePath;
+        $app = new Herbie\Application($sitePath);
         try {
             $path = $app['urlMatcher']->match($route);
         } catch (Exception $ex) {
-
+            // Don't catch exception
         }
+
         if (!empty($path)) {
             return 'herbie/page';
         }
