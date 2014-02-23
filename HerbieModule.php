@@ -21,6 +21,11 @@ class HerbieModule extends CWebModule
     public $sitePath;
 
     /**
+     * @var Herbie\Application The Herbie application.
+     */
+    public $application;
+
+    /**
      * Initializer
      */
     public function init()
@@ -28,6 +33,7 @@ class HerbieModule extends CWebModule
         $this->setImport(array(
             'herbie.components.*',
         ));
+        $this->application = new Herbie\Application($this->sitePath);
     }
 
 }

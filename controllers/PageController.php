@@ -26,9 +26,7 @@ class PageController extends CController
             $route = $request->getPathInfo();
         }
 
-        $sitePath = $this->getModule('herbie')->sitePath;
-        $app = new Herbie\Application($sitePath);
-
+        $app = $this->getModule('herbie')->application;
         $path = $app['urlMatcher']->match($route);
 
         $pageLoader = new Herbie\Loader\PageLoader($app['parser']);

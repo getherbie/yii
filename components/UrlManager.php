@@ -27,8 +27,7 @@ class UrlManager extends CUrlManager
             $route = $request->getPathInfo();
         }
 
-        $sitePath = Yii::app()->getModule('herbie')->sitePath;
-        $app = new Herbie\Application($sitePath);
+        $app = Yii::app()->getModule('herbie')->application;
         try {
             $path = $app['urlMatcher']->match($route);
         } catch (Exception $ex) {
