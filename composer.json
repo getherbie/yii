@@ -1,5 +1,5 @@
 {
-    "name": "getherbie/yii",
+    "name": "getherbie/yii-module",
     "description": "Herbie for Yii Framework. Herbie is a file based CMS & Blos system and not ready for production use yet.",
     "type": "project",
     "minimum-stability": "dev",
