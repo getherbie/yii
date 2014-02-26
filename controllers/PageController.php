@@ -39,6 +39,8 @@ class PageController extends CController
             $content = $app->renderLayout($layout);
         }
 
+		$this->pageTitle = $page->getTitle();
+
         $this->render('index', array(
             'content' => $content
         ));
