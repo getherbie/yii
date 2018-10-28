@@ -3,7 +3,6 @@
     "homepage": "http://www.getherbie.org",
     "description": "Herbie for Yii Framework. Herbie is a file based CMS & Blos system and not ready for production use yet.",
     "type": "project",
-    "minimum-stability": "dev",
     "license":"BSD-3-Clause",
     "require": {
         "php": ">=5.4.0",
